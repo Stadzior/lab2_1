@@ -23,13 +23,14 @@ public class BinarySearch {
 	public static SearchResult search(int key, int[] seq) {
 		int start = 0;
 		int end = seq.length - 1;
+		if(end<0){ throw new IllegalArgumentException();}
 		int center;
 		SearchResult result = new SearchResult();
-
+		
 		while (start <= end) {
 			center = (start + end) / 2;
 			if (seq[center] == key) {
-				result.setPosition(center + 1);
+				result.setPosition(center);
 				break;
 			} else {
 				if (seq[center] < key)

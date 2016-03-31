@@ -15,17 +15,17 @@ public class BinarySearchTest {
 	
 	@Test
 	public void elementFound(){
-		int[] seq = new int[5];
-		seq[0] = 5;
-		int key = 5;
+		int[] seq = new int[]{1,2,3,4,5};
+		int key = 3;
 		SearchResult result = BinarySearch.search(key, seq);	
 		assertThat(result.isFound() && seq[result.getPosition()] == key ,equalTo(true));
 	}
 	
 	@Test
 	public void elementNotFound(){
-		int[] seq = new int[5];
-		SearchResult result = BinarySearch.search(5, seq);
+		int[] seq = new int[]{1,2,3,4};
+		int key = 5;
+		SearchResult result = BinarySearch.search(key, seq);
 		assertThat(!result.isFound() && result.getPosition() == -1 ,equalTo(true));
 	}
 }

@@ -14,9 +14,18 @@ public class BinarySearchTest {
 	}
 	
 	@Test
-	public void isElementFound(){
+	public void elementFound(){
+		int[] seq = new int[5];
+		seq[0] = 5;
+		int key = 5;
+		SearchResult result = BinarySearch.search(key, seq);	
+		assertThat(result.isFound() && seq[result.getPosition()] == key ,equalTo(true));
+	}
+	
+	@Test
+	public void elementNotFound(){
 		int[] seq = new int[5];
 		SearchResult result = BinarySearch.search(5, seq);
-		assertThat(result.isFound(),equalTo(true));
+		assertThat(!result.isFound() && result.getPosition() == -1 ,equalTo(true));
 	}
 }

@@ -17,33 +17,33 @@ public class BinarySearchTest {
         multipleElementSeq = new int[]{1,2,3,4,5};
     }
 	@Test(expected = IllegalArgumentException.class)
-    public void isExceptionThrown_WhenSequenceLenghtEqualsZero(){
+    public void isExceptionThrown_WhenSequenceLengthEqualsZero(){
         SearchResult result = BinarySearch.search(5, new int[]{});
     }
 
 	@Test
-	public void elementFound(){
+	public void isElementFound_WhenItExistsInSequence(){
 		int key = 3;
 		SearchResult result = BinarySearch.search(key, multipleElementSeq);
 		assertThat(result.isFound() && multipleElementSeq[result.getPosition()] == key ,equalTo(true));
 	}
 	
 	@Test
-	public void elementNotFound(){
+	public void isElementNotFound_WhenItsNotExistsInSequence(){
 		int key = 15;
 		SearchResult result = BinarySearch.search(key, multipleElementSeq);
 		assertThat(!result.isFound() && result.getPosition() == -1 ,equalTo(true));
 	}
 
     @Test
-    public void foundElementIsFirst(){
+    public void isElementPositionFirst_WhenItsFirstInSequence(){
         int key = 1;
         SearchResult result = BinarySearch.search(key, multipleElementSeq);
         assertThat(result.isFound() && result.getPosition() == 0 ,equalTo(true));
     }
 
     @Test
-    public void foundElementIsLast(){
+    public void isElementPositionLast_WhenItlsLastInSequence(){
         int key = 5;
         SearchResult result = BinarySearch.search(key, multipleElementSeq);
         assertThat(result.isFound() && result.getPosition() == multipleElementSeq.length-1 ,equalTo(true));
@@ -53,7 +53,7 @@ public class BinarySearchTest {
     public void foundElementIsInCenter(){
         int key = 3;
         SearchResult result = BinarySearch.search(key, multipleElementSeq);
-        boolean isInCenter = (result.getPosition() == Math.floor((double)multipleElementSeq.length/2));
+        boolean isInCenter = (result.getPosition() == Math.floor((double) multipleElementSeq.length / 2));
         assertThat(result.isFound() && isInCenter ,equalTo(true));
     }
 

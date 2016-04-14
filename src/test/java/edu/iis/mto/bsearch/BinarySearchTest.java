@@ -18,7 +18,7 @@ public class BinarySearchTest {
     }
 	@Test(expected = IllegalArgumentException.class)
     public void isExceptionThrown_WhenSequenceLenghtEqualsZero(){
-        SearchResult result = BinarySearch.search(5, singleElementSeq);
+        SearchResult result = BinarySearch.search(5, new int[]{});
     }
 
 	@Test
@@ -30,7 +30,7 @@ public class BinarySearchTest {
 	
 	@Test
 	public void elementNotFound(){
-		int key = 5;
+		int key = 15;
 		SearchResult result = BinarySearch.search(key, multipleElementSeq);
 		assertThat(!result.isFound() && result.getPosition() == -1 ,equalTo(true));
 	}
@@ -47,6 +47,14 @@ public class BinarySearchTest {
         int key = 5;
         SearchResult result = BinarySearch.search(key, multipleElementSeq);
         assertThat(result.isFound() && result.getPosition() == multipleElementSeq.length-1 ,equalTo(true));
+    }
+
+    @Test
+    public void foundElementIsInCenter(){
+        int key = 3;
+        SearchResult result = BinarySearch.search(key, multipleElementSeq);
+        boolean isInCenter = (result.getPosition() == Math.floor((double)multipleElementSeq.length/2));
+        assertThat(result.isFound() && isInCenter ,equalTo(true));
     }
 
 }

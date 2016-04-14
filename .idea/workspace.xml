@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eacd9a4a-2f2c-48aa-a6ed-feed30ae7b86" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/iis/mto/bsearch/BinarySearchTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/iis/mto/bsearch/BinarySearchTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lab2_1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +31,8 @@
       <file leaf-file-name="BinarySearchTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/iis/mto/bsearch/BinarySearchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7350649" vertical-offset="482" max-vertical-offset="1122">
-              <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.68051946" vertical-offset="503" max-vertical-offset="1122">
+              <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -529,12 +528,12 @@
       <created>1460644624600</created>
       <option name="number" value="Default" />
       <updated>1460644624600</updated>
-      <workItem from="1460644626963" duration="2964000" />
+      <workItem from="1460644626963" duration="3062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2964000" />
+    <option name="totallyTimeSpent" value="3062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -613,8 +612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/iis/mto/bsearch/BinarySearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7350649" vertical-offset="482" max-vertical-offset="1122">
-          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.68051946" vertical-offset="503" max-vertical-offset="1122">
+          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

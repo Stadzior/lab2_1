@@ -43,7 +43,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void isElementPositionLast_WhenItlsLastInSequence(){
+    public void isElementPositionLast_WhenItsLastInSequence(){
         int key = 5;
         SearchResult result = BinarySearch.search(key, multipleElementSeq);
         assertThat(result.isFound() && result.getPosition() == multipleElementSeq.length-1 ,equalTo(true));

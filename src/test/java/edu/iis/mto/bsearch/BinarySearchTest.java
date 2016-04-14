@@ -8,10 +8,10 @@ import org.junit.Test;
 public class BinarySearchTest {
 
 	@Test(expected = IllegalArgumentException.class)	
-	public void isExceptionThrownWhenSequenceLenghtEqualsZero(){
-		int[] seq = new int[0];
-		SearchResult result = BinarySearch.search(5, seq);
-	}
+	public void isExceptionThrown_WhenSequenceLenghtEqualsZero() {
+        int[] seq = new int[0];
+        SearchResult result = BinarySearch.search(5, seq);
+    }
 	
 	@Test
 	public void elementFound(){
@@ -28,4 +28,5 @@ public class BinarySearchTest {
 		SearchResult result = BinarySearch.search(key, seq);
 		assertThat(!result.isFound() && result.getPosition() == -1 ,equalTo(true));
 	}
+
 }

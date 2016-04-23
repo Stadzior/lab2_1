@@ -50,11 +50,16 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void foundElementIsInCenter(){
+    public void isElementInCenter_WhenItsPivotInSequence(){
         int key = 3;
         SearchResult result = BinarySearch.search(key, multipleElementSeq);
         boolean isInCenter = (result.getPosition() == Math.floor((double) multipleElementSeq.length / 2));
         assertThat(result.isFound() && isInCenter ,equalTo(true));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void isExceptionThrown_WhenSequenceIsNotSorted(){
+        int[] unsortedSeq = new int[]{0,1,3,4,7,2,3,5,2};
+        SearchResult result = BinarySearch.search(5, unsortedSeq);
+    }
 }

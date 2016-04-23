@@ -23,10 +23,9 @@ public class BinarySearch {
 	public static SearchResult search(int key, int[] seq) {
 		int start = 0;
 		int end = seq.length - 1;
-		if(end<0){ throw new IllegalArgumentException();}
+		if(end<0 || !IsSequenceSorted(seq)){ throw new IllegalArgumentException();}
 		int center;
 		SearchResult result = new SearchResult();
-		
 		while (start <= end) {
 			center = (start + end) / 2;
 			if (seq[center] == key) {
@@ -43,4 +42,18 @@ public class BinarySearch {
 		return result;
 	}
 
+    public static boolean IsSequenceSorted(int[] seq){
+        int prevElem = seq[0];
+        boolean isSorted = true;
+        for(int elem : seq){
+            if(elem<prevElem){
+                isSorted = false;
+                break;
+            }
+            else{
+                prevElem = elem;
+            }
+        }
+        return isSorted;
+    }
 }
